@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone') {
+            steps {
+                echo 'Cloning GitHub Repository'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building Java Project'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Test Cases'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to Server'
+            }
+        }
+    }
+}

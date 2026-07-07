@@ -3,27 +3,15 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                echo 'Cloning GitHub Repository'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'Building Java Project'
+                bat 'javac Hello.java'
             }
         }
 
-        stage('Test') {
+        stage('Run') {
             steps {
-                echo 'Running Test Cases'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying to Server'
+                bat 'java Hello'
             }
         }
     }
